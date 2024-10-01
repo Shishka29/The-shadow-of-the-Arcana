@@ -38,7 +38,7 @@ public class Hero : MonoBehaviour
 
     private void Jump()
     {
-        rb.AddForce(transform.up * jumpForce/2, ForceMode2D.Impulse);
+        rb.AddForce(transform.up * jumpForce/2, ForceMode2D.Impulse); // проблемка с прыжком
     }
 
     private void CheckGround()
