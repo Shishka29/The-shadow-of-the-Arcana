@@ -40,7 +40,7 @@ public class Hero : MonoBehaviour
     {
         rb.AddForce(transform.up * jumpForce/2, ForceMode2D.Impulse); // проблемка с прыжком
     }
-
+    //hjvhjvjhvhjvjbkbjk
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.8f);
