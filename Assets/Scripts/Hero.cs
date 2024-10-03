@@ -6,7 +6,7 @@ public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
     [SerializeField] private float lives = 5;
-    [SerializeField] float jumpForce = 15f;
+    [SerializeField] float jumpForce = 20f;//тут 20, в юнити отображается 15
     private bool isGrounded = false;
 
     private Rigidbody2D rb;
