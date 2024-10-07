@@ -6,7 +6,7 @@ public class Hero : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
     [SerializeField] private float lives = 5;
-    [SerializeField] float jumpForce = 20f;//тут 20, в юнити отображается 15
+    [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
 
     private Rigidbody2D rb;
@@ -38,9 +38,9 @@ public class Hero : MonoBehaviour
 
     private void Jump()
     {
-        rb.AddForce(transform.up * jumpForce/2, ForceMode2D.Impulse); // проблемка с прыжком
+        rb.AddForce(transform.up * JumpForce, ForceMode2D.Impulse); 
     }
-    //hjvhjvjhvhjvjbkbjk
+
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.8f);

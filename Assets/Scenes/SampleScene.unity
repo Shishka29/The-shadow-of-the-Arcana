@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 332339484}
   - component: {fileID: 332339483}
   - component: {fileID: 332339482}
-  - component: {fileID: 332339481}
+  - component: {fileID: 332339485}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -341,21 +341,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &332339481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332339480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 985dbbbdba651b242ba917f0ad337a4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  lives: 5
-  jumpForce: 15
 --- !u!50 &332339482
 Rigidbody2D:
   serializedVersion: 4
@@ -444,6 +429,21 @@ Transform:
   - {fileID: 1926837849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &332339485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332339480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 985dbbbdba651b242ba917f0ad337a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  lives: 5
+  JumpForce: 11
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1703,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 569004243}
     m_Modifications:
+    - target: {fileID: 4034625551023677554, guid: c7b53ea2d6c6a9c4f8498ab8d4dc555b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9510555
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034625551023677554, guid: c7b53ea2d6c6a9c4f8498ab8d4dc555b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05943203
+      objectReference: {fileID: 0}
     - target: {fileID: 4155091075607430822, guid: c7b53ea2d6c6a9c4f8498ab8d4dc555b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.08
