@@ -6,20 +6,32 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
     private Vector3 pos;
+    private Vector3 velocity;
+    public float smoothTime = 0.2f;
+    public float minCameraHeight = -2f;
+
 
     private void Awake()
     {
         if (!player)
         {
-            player = FindObjectOfType <Hero> ().transform;
+            player = FindObjectOfType<Hero>().transform;
         }
     }
+
     private void Update()
     {
         pos = player.position;
         pos.z = -10f;
-        //transform.position = pos; для простого перемещения
-        transform.position = Vector3.Lerp(transform.position, pos, Time.deltaTime*4);//можно поиграться с коэф. для скорости камеры
+        
+
+        if (pos.y < minCameraHeight)
+        {
+            pos.y = minCameraHeight;
+        }
+
+
+        transform.position = Vector3.SmoothDamp(transform.position, pos, ref velocity, smoothTime);
     }
 }
 
