@@ -9,6 +9,7 @@ public class Hero : MonoBehaviour
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
 
+
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;

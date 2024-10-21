@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     private Vector3 pos;
     private Vector3 velocity;
     public float smoothTime = 0.2f;
-    public float minCameraHeight = -2f;
+    public float minCameraHeight = -3.5f;
 
 
     private void Awake()
