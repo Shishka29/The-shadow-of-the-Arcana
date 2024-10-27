@@ -39,6 +39,13 @@ public class Hero : Entity
             Run();
         if (isGrounded && Input.GetButtonDown("Jump"))
             Jump();
+        if (Input.GetMouseButtonDown(0))
+            Attack();
+    }
+
+    private void Attack()
+    {
+       ActiveWeapon.Instance.GetActiveWeapon().Attack();
     }
     private void Run()
     {

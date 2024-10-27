@@ -20,7 +20,7 @@ public class WalkingEnemy : Entity
     private void Move()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * dir.x * 0.7f, 0.1f);
-        Debug.Log(colliders.Length);
+        //Debug.Log(colliders.Length);
         if(colliders.Length > 0)
         {
             dir *= -1f;
