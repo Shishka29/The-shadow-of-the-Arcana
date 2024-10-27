@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hero : MonoBehaviour
+public class Hero : Entity
 {
     [SerializeField] private float speed = 3f;
     [SerializeField] private float lives = 5;
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
 
-
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
+
+    public static Hero Instance { get; set; }
 
     private States State
     {
@@ -24,6 +25,7 @@ public class Hero : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = rb.GetComponentInChildren<SpriteRenderer>();
+        Instance = this;
         
     }
     private void FixedUpdate()
@@ -56,6 +58,11 @@ public class Hero : MonoBehaviour
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.8f);
         isGrounded = collider.Length > 1;
         if (!isGrounded) State = States.jump;
+    }
+    public override void GetDamage()
+    {
+        lives -=1;
+        Debug.Log(lives);
     }
 }   
 
