@@ -9,6 +9,13 @@ public class Hero : Entity
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
 
+    public bool isAttacking = false;
+    public bool isRecharged = true;
+
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask enemy;
+
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
@@ -20,13 +27,14 @@ public class Hero : Entity
         get { return (States)anim.GetInteger("state"); }
         set { anim.SetInteger("state", (int)value); }
     }
-     private void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = rb.GetComponentInChildren<SpriteRenderer>();
         Instance = this;
-        
+        isRecharged = true;
+
     }
     private void FixedUpdate()
     {
@@ -34,18 +42,54 @@ public class Hero : Entity
     }
     private void Update()
     {
-        if (isGrounded) State = States.idle;
-        if (Input.GetButton("Horizontal"))
+        if (isGrounded && !isAttacking) State = States.idle;
+        if (!isAttacking && Input.GetButton("Horizontal"))
             Run();
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (!isAttacking && isGrounded && Input.GetButtonDown("Jump"))
             Jump();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
             Attack();
     }
 
     private void Attack()
     {
-        Debug.Log("Attack");
+        if (isGrounded && isRecharged)
+        {
+            State = States.attack;
+            isAttacking = true;
+            isRecharged = false;
+
+            StartCoroutine(AttackAnimation());
+            StartCoroutine(AttackCoolDown());
+        }
+    }
+
+    private void OnAttack()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            colliders[i].GetComponent<Entity>().GetDamage();
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    private IEnumerator AttackAnimation()
+    {
+        yield return new WaitForSeconds(0.4f);
+        isAttacking = false;
+
+    }
+
+    private IEnumerator AttackCoolDown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isRecharged = true;
     }
     private void Run()
     {
@@ -57,7 +101,7 @@ public class Hero : Entity
 
     private void Jump()
     {
-        rb.AddForce(transform.up * JumpForce, ForceMode2D.Impulse); 
+        rb.AddForce(transform.up * JumpForce, ForceMode2D.Impulse);
     }
 
     private void CheckGround()
@@ -68,14 +112,15 @@ public class Hero : Entity
     }
     public override void GetDamage()
     {
-        lives -=1;
+        lives -= 1;
         Debug.Log(lives);
     }
-}   
+}
 
 public enum States
 {
     idle,
     run,
-    jump
+    jump,
+    attack
 }

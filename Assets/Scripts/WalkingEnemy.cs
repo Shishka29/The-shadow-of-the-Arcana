@@ -15,6 +15,7 @@ public class WalkingEnemy : Entity
     private void Start()
     {
         dir = transform.right;
+        lives = 5;
     }
 
     private void Move()
