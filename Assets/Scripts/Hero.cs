@@ -45,7 +45,7 @@ public class Hero : Entity
 
     private void Attack()
     {
-       ActiveWeapon.Instance.GetActiveWeapon().Attack();
+        Debug.Log("Attack");
     }
     private void Run()
     {
