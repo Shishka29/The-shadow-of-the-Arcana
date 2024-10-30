@@ -69,7 +69,10 @@ public class Hero : Entity
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
         for (int i = 0; i < colliders.Length; i++)
         {
-            colliders[i].GetComponent<Entity>().GetDamage();
+            if (colliders[i].GetComponent<Entity>() != null)
+            {
+                colliders[i].GetComponent<Entity>().GetDamage();
+            }
         }
     }
 
