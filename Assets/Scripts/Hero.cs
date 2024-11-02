@@ -8,6 +8,8 @@ public class Hero : Entity
     [SerializeField] private float lives = 5;
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
+    private int jumpCount = 0; // Счетчик прыжков
+    private int maxJumpCount = 2; // Максимальное количество прыжков (двойной прыжок)
 
     public bool isAttacking = false;
     public bool isRecharged = true;
@@ -27,6 +29,7 @@ public class Hero : Entity
         get { return (States)anim.GetInteger("state"); }
         set { anim.SetInteger("state", (int)value); }
     }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,18 +37,19 @@ public class Hero : Entity
         sprite = rb.GetComponentInChildren<SpriteRenderer>();
         Instance = this;
         isRecharged = true;
-
     }
+
     private void FixedUpdate()
     {
         CheckGround();
     }
+
     private void Update()
     {
         if (isGrounded && !isAttacking) State = States.idle;
         if (!isAttacking && Input.GetButton("Horizontal"))
             Run();
-        if (!isAttacking && isGrounded && Input.GetButtonDown("Jump"))
+        if (!isAttacking && Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
             Jump();
         if (Input.GetButtonDown("Fire1"))
             Attack();
@@ -69,10 +73,7 @@ public class Hero : Entity
         Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].GetComponent<Entity>() != null)
-            {
-                colliders[i].GetComponent<Entity>().GetDamage();
-            }
+            colliders[i].GetComponent<Entity>().GetDamage();
         }
     }
 
@@ -86,7 +87,6 @@ public class Hero : Entity
     {
         yield return new WaitForSeconds(0.4f);
         isAttacking = false;
-
     }
 
     private IEnumerator AttackCoolDown()
@@ -94,6 +94,7 @@ public class Hero : Entity
         yield return new WaitForSeconds(0.5f);
         isRecharged = true;
     }
+
     private void Run()
     {
         if (isGrounded) State = States.run;
@@ -104,15 +105,31 @@ public class Hero : Entity
 
     private void Jump()
     {
-        rb.AddForce(transform.up * JumpForce, ForceMode2D.Impulse);
+        if (jumpCount < maxJumpCount-1) // Ограничиваем количество прыжков до maxJumpCount
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0); // Сбрасываем вертикальную скорость перед прыжком
+            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            jumpCount++; // Увеличиваем счетчик прыжков
+            State = States.jump; // Устанавливаем состояние прыжка
+        }
     }
 
     private void CheckGround()
     {
         Collider2D[] collider = Physics2D.OverlapCircleAll(transform.position, 0.8f);
         isGrounded = collider.Length > 1;
-        if (!isGrounded) State = States.jump;
+
+        if (isGrounded)
+        {
+            jumpCount = 0; // Сбрасываем счетчик прыжков при приземлении
+            if (!isAttacking) State = States.idle; // Устанавливаем состояние idle при приземлении
+        }
+        else if (jumpCount >= 1) // Проверка, если персонаж в прыжке
+        {
+            State = States.jump;
+        }
     }
+
     public override void GetDamage()
     {
         lives -= 1;

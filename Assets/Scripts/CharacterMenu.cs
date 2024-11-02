@@ -20,8 +20,8 @@ public class CharacterMenu : MonoBehaviour
     public Button button6;
     public Button button7;
 
-    public Text text; // —сылка на текст
 
+    public Text text; // —сылка на текст
 
     public void Awake()
     {
