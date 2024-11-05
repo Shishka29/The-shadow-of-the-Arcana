@@ -41,4 +41,23 @@ public class MovingPlatform : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Если персонаж касается платформы, делаем его дочерним объектом платформы
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        // Если персонаж покидает платформу, убираем его из дочерних объектов платформы
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
 }
+
