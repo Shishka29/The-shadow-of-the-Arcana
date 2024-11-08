@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hero : Entity
 {
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float lives = 5;
+    [SerializeField] private int health;
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
-    private int jumpCount = 0; // Счетчик прыжков
-    private int maxJumpCount = 2; // Максимальное количество прыжков (двойной прыжок)
+
+    [SerializeField] private Image[] hearts;
+
+    [SerializeField] private Sprite aliveHeart;
+    [SerializeField] private Sprite deadHeart;
+
+    private int jumpCount = 0; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    private int maxJumpCount = 2; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
 
     public bool isAttacking = false;
     public bool isRecharged = true;
@@ -32,6 +39,9 @@ public class Hero : Entity
 
     private void Awake()
     {
+        lives = 5;
+        health = lives;
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = rb.GetComponentInChildren<SpriteRenderer>();
@@ -53,6 +63,22 @@ public class Hero : Entity
             Jump();
         if (Input.GetButtonDown("Fire1"))
             Attack();
+
+        if(health > lives){
+            health = lives;
+        }
+
+        for(int i = 0; i < hearts.Length; i++){
+            if(i < health){
+                hearts[i].sprite = aliveHeart;
+            }
+            else hearts[i].sprite = deadHeart;
+
+            //if(i < lives){
+              //  hearts[i].enabled = true;
+            //}
+            //else hearts[i].enabled = false;
+        }
     }
 
     private void Attack()
@@ -105,12 +131,12 @@ public class Hero : Entity
 
     private void Jump()
     {
-        if (jumpCount < maxJumpCount-1) // Ограничиваем количество прыжков до maxJumpCount
+        if (jumpCount < maxJumpCount-1) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ maxJumpCount
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // Сбрасываем вертикальную скорость перед прыжком
+            rb.velocity = new Vector2(rb.velocity.x, 0); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-            jumpCount++; // Увеличиваем счетчик прыжков
-            State = States.jump; // Устанавливаем состояние прыжка
+            jumpCount++; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            State = States.jump; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         }
     }
 
@@ -121,10 +147,10 @@ public class Hero : Entity
 
         if (isGrounded)
         {
-            jumpCount = 0; // Сбрасываем счетчик прыжков при приземлении
-            if (!isAttacking) State = States.idle; // Устанавливаем состояние idle при приземлении
+            jumpCount = 0; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            if (!isAttacking) State = States.idle; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ idle пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
-        else if (jumpCount >= 1) // Проверка, если персонаж в прыжке
+        else if (jumpCount >= 1) // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         {
             State = States.jump;
         }
