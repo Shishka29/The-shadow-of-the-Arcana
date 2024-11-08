@@ -8,6 +8,9 @@ public class WalkingEnemy : Entity
     private Vector3 dir;
     private SpriteRenderer sprite;
 
+    public Transform Pos;
+    public float Rad;
+
     private void Awake(){
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
@@ -20,15 +23,21 @@ public class WalkingEnemy : Entity
 
     private void Move()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position + transform.up * 0.1f + transform.right * dir.x * 0.7f, 0.1f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(Pos.position, Rad);
         //Debug.Log(colliders.Length);
-        if(colliders.Length > 0)
+        if(colliders.Length > 2)
         {
             dir *= -1f;
-            Debug.Log("dwj");
+            //Debug.Log("dwj");
         }
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, Time.deltaTime);
         sprite.flipX = dir.x > 0.0f;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(Pos.position, Rad);
     }
 
     private void Update()
