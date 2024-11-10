@@ -32,6 +32,12 @@ public class CharacterMenu : MonoBehaviour
     public Button button7;
 
 
+    public static int buttonpressed = 0;
+
+
+
+    public Button addbutton;
+
     public Text text; // Ссылка на текст
 
 
@@ -64,32 +70,44 @@ public class CharacterMenu : MonoBehaviour
     {
         if (b == button1 && card0saver.card0save == true)
         {
+            buttonpressed = 1;
+            addbutton.interactable = true;
             text.text = "Дурак"; // Меняем текст на объекте Text
         }
 
         else if (b == button2 && card1saver.card1save == true)
         {
+            buttonpressed = 2;
+            addbutton.interactable = true;
             text.text = "Маг"; // Меняем текст на объекте Text
         }
 
         else if (b == button3 && card2saver.card2save == true)
         {
+            buttonpressed = 3;
+            addbutton.interactable = true;
             text.text = "Жрица"; // Меняем текст на объекте Text
         }
-  
+
         else if (b == button4 && card3saver.card3save == true)
         {
+            buttonpressed = 4;
+            addbutton.interactable = true;
             text.text = "Император"; // Меняем текст на объекте Text
         }
 
 
         else if (b == button5 && card4saver.card4save == true)
         {
+            buttonpressed = 5;
+            addbutton.interactable = true;
             text.text = "Императрица"; // Меняем текст на объекте Text
         }
-        
         else
+        {
+            addbutton.interactable = false;
             text.text = "Карта заблокирована!";
+        }
 
     }
 
