@@ -8,8 +8,19 @@ using UnityEngine.UI; // Добавьте эту директиву
 
 public class CharacterMenu : MonoBehaviour
 {
+
     public List<GameObject> card;
     private int cardid;
+
+
+    public GameObject card0;
+    public GameObject card1;
+    public GameObject card2;
+    public GameObject card3;
+    public GameObject card4;
+    public GameObject card5;
+
+
 
     // Добавим ссылки на кнопки
     public Button button1;
@@ -23,28 +34,69 @@ public class CharacterMenu : MonoBehaviour
 
     public Text text; // Ссылка на текст
 
-    public void Awake()
+
+    public void Start()
     {
-        
+        if (card0saver.card0save == true && card0 != null)
+        {
+            card0.GetComponent<Image>().color = Color.green;
+        }
+        if (card1saver.card1save == true && card0 != null)
+        {
+            card1.GetComponent<Image>().color = Color.green;
+        }
+        if (card2saver.card2save == true && card0 != null)
+        {
+            card2.GetComponent<Image>().color = Color.green;
+        }
+        if (card3saver.card3save == true && card0 != null)
+        {
+            card3.GetComponent<Image>().color = Color.green;
+        }
+        if (card4saver.card4save == true && card0 != null)
+        {
+            card4.GetComponent<Image>().color = Color.green;
+        }
     }
+
 
     public void ChangeText(Button b)
     {
-        if (b== button1) 
+        if (b == button1 && card0saver.card0save == true)
+        {
             text.text = "Дурак"; // Меняем текст на объекте Text
-        if (b == button2)
+        }
+
+        else if (b == button2 && card1saver.card1save == true)
+        {
             text.text = "Маг"; // Меняем текст на объекте Text
-        if (b == button3)
-            text.text = "Верховная жрица"; // Меняем текст на объекте Text
-        if (b == button4)
+        }
+
+        else if (b == button3 && card2saver.card2save == true)
+        {
+            text.text = "Жрица"; // Меняем текст на объекте Text
+        }
+  
+        else if (b == button4 && card3saver.card3save == true)
+        {
             text.text = "Император"; // Меняем текст на объекте Text
-        if (b == button5)
+        }
+
+
+        else if (b == button5 && card4saver.card4save == true)
+        {
             text.text = "Императрица"; // Меняем текст на объекте Text
-        if (b == button6)
-            text.text = "Текст изменен 1"; // Меняем текст на объекте Text
-        if (b == button7)
-            text.text = "Текст изменен 2"; // Меняем текст на объекте Text
+        }
+        
+        else
+            text.text = "Карта заблокирована!";
+
     }
+
+
+
+    
+    
 
     public void changeScene(int scene)
     {
