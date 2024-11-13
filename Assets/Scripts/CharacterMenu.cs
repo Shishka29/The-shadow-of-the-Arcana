@@ -45,26 +45,42 @@ public class CharacterMenu : MonoBehaviour
     {
         if (card0saver.card0save == true && card0 != null)
         {
-            card0.GetComponent<Image>().color = Color.green;
+            card0.GetComponent<Image>().color = Color.white;
         }
         if (card1saver.card1save == true && card0 != null)
         {
-            card1.GetComponent<Image>().color = Color.green;
+            card1.GetComponent<Image>().color = Color.white;
         }
         if (card2saver.card2save == true && card0 != null)
         {
-            card2.GetComponent<Image>().color = Color.green;
+            card2.GetComponent<Image>().color = Color.white;
         }
         if (card3saver.card3save == true && card0 != null)
         {
-            card3.GetComponent<Image>().color = Color.green;
+            card3.GetComponent<Image>().color = Color.white;
         }
         if (card4saver.card4save == true && card0 != null)
         {
-            card4.GetComponent<Image>().color = Color.green;
+            card4.GetComponent<Image>().color = Color.white;
         }
     }
 
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name!="CharacterMenu") 
+            { 
+                SceneManager.LoadScene("CharacterMenu");
+            }
+            else
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
+        }
+    }
 
     public void ChangeText(Button b)
     {
@@ -72,28 +88,28 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 1;
             addbutton.interactable = true;
-            text.text = "Дурак"; // Меняем текст на объекте Text
+            text.text = "THE FOOL" + "\n" +"Card effect"; // Меняем текст на объекте Text
         }
 
         else if (b == button2 && card1saver.card1save == true)
         {
             buttonpressed = 2;
             addbutton.interactable = true;
-            text.text = "Маг"; // Меняем текст на объекте Text
+            text.text = "THE MAGITIAN" + "\n" + "Card effect"; // Меняем текст на объекте Text
         }
 
         else if (b == button3 && card2saver.card2save == true)
         {
             buttonpressed = 3;
             addbutton.interactable = true;
-            text.text = "Жрица"; // Меняем текст на объекте Text
+            text.text = "THE HIGH PRIESTESS" + "\n" + "Card effect"; // Меняем текст на объекте Text
         }
 
         else if (b == button4 && card3saver.card3save == true)
         {
             buttonpressed = 4;
             addbutton.interactable = true;
-            text.text = "Император"; // Меняем текст на объекте Text
+            text.text = "THE EMPRESS" + "\n" + "Card effect"; ; // Меняем текст на объекте Text
         }
 
 
@@ -101,12 +117,12 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 5;
             addbutton.interactable = true;
-            text.text = "Императрица"; // Меняем текст на объекте Text
+            text.text = "THE EMPEROR" + "\n" + "Card effect"; // Меняем текст на объекте Text
         }
         else
         {
             addbutton.interactable = false;
-            text.text = "Карта заблокирована!";
+            text.text = "CARD BLOCK!";
         }
 
     }
@@ -116,10 +132,6 @@ public class CharacterMenu : MonoBehaviour
     
     
 
-    public void changeScene(int scene)
-    {
-        SceneManager.LoadScene(scene);
-    }
 
 
 

@@ -16,6 +16,8 @@ public class RemoveButton : MonoBehaviour
     public Image targetImageq4;
     public Image targetImageq5;
 
+    public Sprite remiq;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,27 +42,27 @@ public class RemoveButton : MonoBehaviour
     {
         if (AddButton.zansprite1 == CharacterMenu.buttonpressed)
         {
-            targetImageq1.sprite = null;
+            targetImageq1.sprite = remiq;
             AddButton.zansprite1 = 0;
         }
         else if (AddButton.zansprite2 == CharacterMenu.buttonpressed)
         {
-            targetImageq2.sprite = null;
+            targetImageq2.sprite = remiq;
             AddButton.zansprite2 = 0;
         }
         else if (AddButton.zansprite3 == CharacterMenu.buttonpressed)
         {
-            targetImageq3.sprite = null;
+            targetImageq3.sprite = remiq;
             AddButton.zansprite3 = 0;
         }
         else if (AddButton.zansprite4 == CharacterMenu.buttonpressed)
         {
-            targetImageq4.sprite = null;
+            targetImageq4.sprite = remiq;
             AddButton.zansprite4 = 0;
         }
         else if (AddButton.zansprite5 == CharacterMenu.buttonpressed)
         {
-            targetImageq5.sprite = null;
+            targetImageq5.sprite = remiq;
             AddButton.zansprite5 = 0;
         }
     }

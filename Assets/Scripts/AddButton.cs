@@ -28,7 +28,7 @@ public class AddButton : MonoBehaviour
     public static int zansprite4 = 0;
     public static int zansprite5 = 0;
 
-
+    public Sprite remi;
 
 
     public Button buttonadd;
@@ -47,7 +47,7 @@ public class AddButton : MonoBehaviour
 
     private void AddCard()
     {
-        if (targetImage1.sprite == null)
+        if (targetImage1.sprite == remi)
         {
             if (CharacterMenu.buttonpressed==1 && zansprite1!=1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
@@ -78,7 +78,7 @@ public class AddButton : MonoBehaviour
 
 
 
-        else if (targetImage2.sprite == null)
+        else if (targetImage2.sprite == remi)
         {
             if (CharacterMenu.buttonpressed==1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
@@ -108,7 +108,7 @@ public class AddButton : MonoBehaviour
         }
 
 
-        else if (targetImage3.sprite == null)
+        else if (targetImage3.sprite == remi)
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
@@ -138,7 +138,7 @@ public class AddButton : MonoBehaviour
         }
 
 
-        else if (targetImage4.sprite == null)
+        else if (targetImage4.sprite == remi)
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
@@ -169,7 +169,7 @@ public class AddButton : MonoBehaviour
 
 
 
-        else if (targetImage5.sprite == null)
+        else if (targetImage5.sprite == remi)
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
