@@ -11,6 +11,7 @@ public class AddButton : MonoBehaviour
     public Sprite spr3;
     public Sprite spr4;
     public Sprite spr5;
+    
 
 
 
@@ -21,11 +22,11 @@ public class AddButton : MonoBehaviour
     public Image targetImage4;
     public Image targetImage5;
 
-    private int zansprite1=0;
-    private int zansprite2=0;
-    private int zansprite3 = 0;
-    private int zansprite4 = 0;
-    private int zansprite5 = 0;
+    public static int zansprite1=0;
+    public static int zansprite2=0;
+    public static int zansprite3 = 0;
+    public static int zansprite4 = 0;
+    public static int zansprite5 = 0;
 
 
 
