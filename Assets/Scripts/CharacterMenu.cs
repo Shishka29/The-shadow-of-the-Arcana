@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; // Äîáàâüòå ıòó äèğåêòèâó
@@ -40,47 +41,59 @@ public class CharacterMenu : MonoBehaviour
 
     public Text text; // Ññûëêà íà òåêñò
 
+    private Canvas ñanvas;
 
-    public void Start()
+    private void Awake()
+    {
+        ñanvas = GameObject.Find("CharacterMenu").GetComponent<Canvas>();
+        ñanvas.enabled = false;
+    }
+
+        
+
+
+    private void Update()
     {
         if (card0saver.card0save == true && card0 != null)
         {
             card0.GetComponent<Image>().color = Color.white;
         }
-        if (card1saver.card1save == true && card0 != null)
+        if (card1saver.card1save == true && card1 != null)
         {
             card1.GetComponent<Image>().color = Color.white;
         }
-        if (card2saver.card2save == true && card0 != null)
+        if (card2saver.card2save == true && card2 != null)
         {
             card2.GetComponent<Image>().color = Color.white;
         }
-        if (card3saver.card3save == true && card0 != null)
+        if (card3saver.card3save == true && card3 != null)
         {
             card3.GetComponent<Image>().color = Color.white;
         }
-        if (card4saver.card4save == true && card0 != null)
+        if (card4saver.card4save == true && card4 != null)
         {
             card4.GetComponent<Image>().color = Color.white;
         }
-    }
-
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (card5saver.card5save == true && card5 != null)
         {
-            Scene currentScene = SceneManager.GetActiveScene();
-            if (currentScene.name!="CharacterMenu") 
-            { 
-                SceneManager.LoadScene("CharacterMenu");
-            }
-            else
-            {
-                SceneManager.LoadScene("SampleScene");
-            }
+            card5.GetComponent<Image>().color = Color.white;
         }
+
+
+
+
+        if (ñanvas.enabled==true && Input.GetKeyDown(KeyCode.C))
+        {
+            ñanvas.enabled = false;
+        }
+        else if(ñanvas.enabled == false && Input.GetKeyDown(KeyCode.C))
+        {
+            ñanvas.enabled = true;
+        }
+
     }
+
+   
 
     public void ChangeText(Button b)
     {
