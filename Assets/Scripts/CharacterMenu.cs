@@ -4,7 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // Добавьте эту директиву
+using UnityEngine.UI; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 
 public class CharacterMenu : MonoBehaviour
@@ -23,7 +23,7 @@ public class CharacterMenu : MonoBehaviour
 
 
 
-    // Добавим ссылки на кнопки
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public Button button1;
     public Button button2;
     public Button button3;
@@ -39,14 +39,14 @@ public class CharacterMenu : MonoBehaviour
 
     public Button addbutton;
 
-    public Text text; // Ссылка на текст
+    public Text text; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
-    private Canvas сanvas;
+    private Canvas Canvas;
 
     private void Awake()
     {
-        сanvas = GameObject.Find("CharacterMenu").GetComponent<Canvas>();
-        сanvas.enabled = false;
+        Canvas = GameObject.Find("CharacterMenu").GetComponent<Canvas>();
+        Canvas.enabled = false;
     }
 
         
@@ -82,13 +82,15 @@ public class CharacterMenu : MonoBehaviour
 
 
 
-        if (сanvas.enabled==true && Input.GetKeyDown(KeyCode.C))
+        if (Canvas.enabled==true && Input.GetKeyDown(KeyCode.C))
         {
-            сanvas.enabled = false;
+            Canvas.enabled = false;
+            Time.timeScale = 1;
         }
-        else if(сanvas.enabled == false && Input.GetKeyDown(KeyCode.C))
+        else if(Canvas.enabled == false && Input.GetKeyDown(KeyCode.C))
         {
-            сanvas.enabled = true;
+            Canvas.enabled = true;
+            Time.timeScale = 0;
         }
 
     }
@@ -101,28 +103,28 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 1;
             addbutton.interactable = true;
-            text.text = "THE FOOL" + "\n" +"Card effect"; // Меняем текст на объекте Text
+            text.text = "THE FOOL" + "\n" +"Card effect"; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Text
         }
 
         else if (b == button2 && card1saver.card1save == true)
         {
             buttonpressed = 2;
             addbutton.interactable = true;
-            text.text = "THE MAGITIAN" + "\n" + "Card effect"; // Меняем текст на объекте Text
+            text.text = "THE MAGITIAN" + "\n" + "Card effect"; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Text
         }
 
         else if (b == button3 && card2saver.card2save == true)
         {
             buttonpressed = 3;
             addbutton.interactable = true;
-            text.text = "THE HIGH PRIESTESS" + "\n" + "Card effect"; // Меняем текст на объекте Text
+            text.text = "THE HIGH PRIESTESS" + "\n" + "Card effect"; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Text
         }
 
         else if (b == button4 && card3saver.card3save == true)
         {
             buttonpressed = 4;
             addbutton.interactable = true;
-            text.text = "THE EMPRESS" + "\n" + "Card effect"; ; // Меняем текст на объекте Text
+            text.text = "THE EMPRESS" + "\n" + "Card effect"; ; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Text
         }
 
 
@@ -130,7 +132,7 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 5;
             addbutton.interactable = true;
-            text.text = "THE EMPEROR" + "\n" + "Card effect"; // Меняем текст на объекте Text
+            text.text = "THE EMPEROR" + "\n" + "Card effect"; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Text
         }
         else
         {

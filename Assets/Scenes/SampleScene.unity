@@ -1842,8 +1842,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 284594113}
   m_HandleRect: {fileID: 284594112}
   m_Direction: 0
-  m_Value: -0.00000039923708
-  m_Size: 0.3716075
+  m_Value: -0.00000028516934
+  m_Size: 0.34014544
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5017,7 +5017,7 @@ GameObject:
   - component: {fileID: 885560118}
   - component: {fileID: 885560117}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
