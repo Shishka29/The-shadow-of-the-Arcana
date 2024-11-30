@@ -18,7 +18,13 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-
+    private void Update()
+    {
+        if (EndLevel.end1 == true)
+        {
+            DataContainer.checkpointindex = 0;
+        }
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class Hero : Entity
 {
@@ -9,6 +11,7 @@ public class Hero : Entity
     [SerializeField] private int health;
     [SerializeField] float JumpForce = 11f;
     private bool isGrounded = false;
+    private int hp;
 
     [SerializeField] private Image[] hearts;
 
@@ -31,6 +34,9 @@ public class Hero : Entity
 
     public static Hero Instance { get; set; }
 
+
+    private Canvas DeathMenu;
+
     private States State
     {
         get { return (States)anim.GetInteger("state"); }
@@ -39,8 +45,10 @@ public class Hero : Entity
 
     private void Awake()
     {
-        lives = 5;
-        health = lives;
+        DeathMenu = GameObject.Find("MenuDeath").GetComponent<Canvas>();
+        DeathMenu.enabled = false;
+        hp = 5;
+        health = hp;
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -64,8 +72,8 @@ public class Hero : Entity
         if (Input.GetButtonDown("Fire1"))
             Attack();
 
-        if(health > lives){
-            health = lives;
+        if(health > hp){
+            health = hp;
         }
 
         for(int i = 0; i < hearts.Length; i++){
@@ -79,6 +87,11 @@ public class Hero : Entity
             //}
             //else hearts[i].enabled = false;
         }
+        if (hp <= 0)
+        {
+            death();
+        }
+     
     }
 
     private void Attack()
@@ -154,13 +167,33 @@ public class Hero : Entity
         {
             State = States.jump;
         }
+        if (transform.position.y < -20)
+        {
+            // Если игрок находится ниже заданного числа по оси Y, установить hp равным 0
+            hp = 0;
+        }
     }
 
     public override void GetDamage()
     {
-        lives -= 1;
-        Debug.Log(lives);
+        hp -= 1;
+        Debug.Log(hp);
     }
+
+    private void death()
+    {
+        if (hp <= 0)
+        {
+            Debug.Log("death");
+            if (DeathMenu.enabled == false)
+            {
+                Time.timeScale = 0;
+                speed = 0;
+                DeathMenu.enabled=true;
+            }
+        }
+    }
+
 }
 
 public enum States
