@@ -25,13 +25,13 @@ public class WalkingEnemy : Entity
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(Pos.position, Rad);
         //Debug.Log(colliders.Length);
-        if(colliders.Length > 2)
+        if(colliders.Length > 3)
         {
             dir *= -1f;
             //Debug.Log("dwj");
         }
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, Time.deltaTime);
-        sprite.flipX = dir.x > 0.0f;
+        sprite.flipX = dir.x < 0.0f;
     }
 
     private void OnDrawGizmosSelected()
@@ -50,8 +50,6 @@ public class WalkingEnemy : Entity
         if(collision.gameObject == Hero.Instance.gameObject)
         {
             Hero.Instance.GetDamage();
-            lives--;
-            Debug.Log("кошка жызн " + lives);
         }
         
         if(lives < 1)

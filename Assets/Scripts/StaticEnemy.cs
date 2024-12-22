@@ -13,8 +13,6 @@ public class StaticEnemy : Entity
         if(collision.gameObject==Hero.Instance.gameObject)
         {
             Hero.Instance.GetDamage();
-            lives--;
-            Debug.Log("у тетрапакета " + lives);
         }
 
         if(lives < 1)
