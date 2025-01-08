@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEditor.VersionControl.Asset;
 
 
 public class Hero : Entity
@@ -72,18 +73,21 @@ public class Hero : Entity
         if (Input.GetButtonDown("Fire1"))
             Attack();
 
-        if(health > hp){
+        if (health > hp)
+        {
             health = hp;
         }
 
-        for(int i = 0; i < hearts.Length; i++){
-            if(i < health){
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
                 hearts[i].sprite = aliveHeart;
             }
             else hearts[i].sprite = deadHeart;
 
             //if(i < lives){
-              //  hearts[i].enabled = true;
+            //  hearts[i].enabled = true;
             //}
             //else hearts[i].enabled = false;
         }
@@ -91,7 +95,7 @@ public class Hero : Entity
         {
             death();
         }
-     
+
     }
 
     private void Attack()
@@ -141,7 +145,6 @@ public class Hero : Entity
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, speed * Time.deltaTime);
         sprite.flipX = dir.x < 0.0f;
     }
-
     private void Jump()
     {
         if (jumpCount < maxJumpCount-1) // ������������ ���������� ������� �� maxJumpCount

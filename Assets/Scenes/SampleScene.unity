@@ -11566,6 +11566,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 364397461919727176, guid: 900db9e0ffb36ea4d93a09816d862b96, type: 3}
+      propertyPath: frontCheck
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 364397461919727176, guid: 900db9e0ffb36ea4d93a09816d862b96, type: 3}
       propertyPath: attackRange
       value: 1.5
       objectReference: {fileID: 0}
@@ -11638,7 +11642,8 @@ PrefabInstance:
       value: 0.066
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4516785042351093554, guid: 900db9e0ffb36ea4d93a09816d862b96, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900db9e0ffb36ea4d93a09816d862b96, type: 3}
