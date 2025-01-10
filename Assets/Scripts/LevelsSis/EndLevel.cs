@@ -21,5 +21,29 @@ public class EndLevel : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene("Levels");
         }
+        else if (collision.CompareTag("Player"))
+        {
+            end2 = true;
+            Destroy(gameObject);
+            SceneManager.LoadScene("Levels");
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            end3 = true;
+            Destroy(gameObject);
+            SceneManager.LoadScene("Levels");
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            end4 = true;
+            Destroy(gameObject);
+            SceneManager.LoadScene("Levels");
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            end5 = true;
+            Destroy(gameObject);
+            SceneManager.LoadScene("Levels");
+        }
     }
 }

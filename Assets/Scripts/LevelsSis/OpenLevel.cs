@@ -25,6 +25,10 @@ public class OpenLevel : MonoBehaviour
     private void Start()
     {
         level1.onClick.AddListener(open1);
+        level2.onClick.AddListener(open2);
+        level3.onClick.AddListener(open3);
+        level4.onClick.AddListener(open4);
+        level5.onClick.AddListener(open5);
     }
 
     // Start is called before the first frame update
@@ -33,6 +37,22 @@ public class OpenLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (EndLevel.end1)
+        {
+            level2.interactable = true;
+        }
+        else if (EndLevel.end2)
+        {
+            level3.interactable = true;
+        }
+        else if (EndLevel.end3)
+        {
+            level4.interactable = true;
+        }
+        else if (EndLevel.end4)
+        {
+            level5.interactable = true;
+        }
         back();
         //условия активации кнопок
         
@@ -43,6 +63,30 @@ public class OpenLevel : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("SampleScene");
+    }
+
+    public void open2()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("SecondScene");
+    }
+
+    public void open3()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("ThirdScene");
+    }
+
+    public void open4()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("FourthScene");
+    }
+
+    public void open5()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("LastScene");
     }
 
     public void back()
