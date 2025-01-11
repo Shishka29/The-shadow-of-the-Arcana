@@ -18,7 +18,6 @@ public class WalkingEnemy : Entity
     private void Start()
     {
         dir = transform.right;
-        lives = 5;
     }
 
     private void Move()
@@ -52,7 +51,7 @@ public class WalkingEnemy : Entity
             Hero.Instance.GetDamage();
         }
         
-        if(lives < 1)
+        if(lives <= 0)
         {
             Die();
         }

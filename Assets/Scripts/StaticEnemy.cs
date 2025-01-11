@@ -6,7 +6,7 @@ public class StaticEnemy : Entity
 {
     private void Start()
     {
-        lives = 1;
+        lives = 2;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,7 +15,7 @@ public class StaticEnemy : Entity
             Hero.Instance.GetDamage();
         }
 
-        if(lives < 1)
+        if(lives <= 0)
         {
             Die();
         }

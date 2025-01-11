@@ -5,10 +5,11 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     protected int lives;
+    protected int power = 2;
     public virtual void GetDamage()
     {
-        lives--;
-        if (lives < 1)
+        lives = lives - power;
+        if (lives <= 0)
             Die();
     }
     public virtual void Die()
