@@ -20,7 +20,12 @@ public class CharacterMenu : MonoBehaviour
     public GameObject card3;
     public GameObject card4;
     public GameObject card5;
-
+    public GameObject card6;
+    public GameObject card7;
+    public GameObject card8;
+    public GameObject card9;
+    public GameObject card10;
+    public GameObject card11;
 
 
     // ������� ������ �� ������
@@ -31,6 +36,10 @@ public class CharacterMenu : MonoBehaviour
     public Button button5;
     public Button button6;
     public Button button7;
+    public Button button8;
+    public Button button9;
+    public Button button10;
+    public Button button11;
 
 
     public static int buttonpressed = 0;
@@ -78,7 +87,22 @@ public class CharacterMenu : MonoBehaviour
         {
             card5.GetComponent<Image>().color = Color.white;
         }
-
+        if (card6saver.card6save == true && card6 != null)
+        {
+            card6.GetComponent<Image>().color = Color.white;
+        }
+        if (card7saver.card7save == true && card7 != null)
+        {
+            card7.GetComponent<Image>().color = Color.white;
+        }
+        if (card8saver.card8save == true && card8 != null)
+        {
+            card8.GetComponent<Image>().color = Color.white;
+        }
+        if (card9saver.card9save == true && card9 != null)
+        {
+            card9.GetComponent<Image>().color = Color.white;
+        }
 
 
 
@@ -134,11 +158,55 @@ public class CharacterMenu : MonoBehaviour
             addbutton.interactable = true;
             text.text = "THE EMPEROR" + "\n" + "Card effect"; // ������ ����� �� ������� Text
         }
+        
+
+        else if (b == button6 && card5saver.card5save == true)
+        {
+            buttonpressed = 6;
+            addbutton.interactable = true;
+            text.text = "THE HEIROPHANT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button7 && card6saver.card6save == true)
+        {
+            buttonpressed = 7;
+            addbutton.interactable = true;
+            text.text = "THE LOVERS" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+
+        else if (b == button8 && card7saver.card7save == true)
+        {
+            buttonpressed = 8;
+            addbutton.interactable = true;
+            text.text = "THE CHARIOT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button9 && card8saver.card8save == true)
+        {
+            buttonpressed = 9;
+            addbutton.interactable = true;
+            text.text = "STRENGHT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button10 && card9saver.card9save == true)
+        {
+            buttonpressed = 10;
+            addbutton.interactable = true;
+            text.text = "THE HERMIT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+
         else
         {
             addbutton.interactable = false;
             text.text = "CARD BLOCK!";
         }
+
+
+
+
+
 
     }
 

@@ -716,6 +716,12 @@ MonoBehaviour:
   card3: {fileID: 1087802194}
   card4: {fileID: 1271055486}
   card5: {fileID: 1736265744}
+  card6: {fileID: 0}
+  card7: {fileID: 0}
+  card8: {fileID: 0}
+  card9: {fileID: 0}
+  card10: {fileID: 0}
+  card11: {fileID: 0}
   button1: {fileID: 1763690679}
   button2: {fileID: 1946776461}
   button3: {fileID: 390793333}
@@ -723,6 +729,10 @@ MonoBehaviour:
   button5: {fileID: 2068132295}
   button6: {fileID: 804106626}
   button7: {fileID: 49470671}
+  button8: {fileID: 0}
+  button9: {fileID: 0}
+  button10: {fileID: 0}
+  button11: {fileID: 0}
   addbutton: {fileID: 739933503}
   text: {fileID: 132615484}
 --- !u!114 &132615484
@@ -1304,7 +1314,7 @@ Transform:
   m_GameObject: {fileID: 250762121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36, y: -6.4, z: 0}
+  m_LocalPosition: {x: 166.13, y: -3.66, z: 0}
   m_LocalScale: {x: 0.14477797, y: 0.1274354, z: 0.4052}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2079,7 +2089,7 @@ Transform:
   m_GameObject: {fileID: 385506544}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.74, y: -5.3, z: 0}
+  m_LocalPosition: {x: 33.26, y: -2.2, z: 0}
   m_LocalScale: {x: 0.15098293, y: 0.1611076, z: 0.3463}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3514,6 +3524,11 @@ MonoBehaviour:
   spr3: {fileID: 348550670, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
   spr4: {fileID: 1662659818, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
   spr5: {fileID: -604241613, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
+  spr6: {fileID: 0}
+  spr7: {fileID: 0}
+  spr8: {fileID: 0}
+  spr9: {fileID: 0}
+  spr10: {fileID: 0}
   targetImage1: {fileID: 1436160331}
   targetImage2: {fileID: 1940280347}
   targetImage3: {fileID: 393193458}
@@ -3785,7 +3800,7 @@ Transform:
   m_GameObject: {fileID: 782336303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.36, y: -6.34, z: 0}
+  m_LocalPosition: {x: 82.89, y: -4.06, z: 0}
   m_LocalScale: {x: 0.13759176, y: 0.12891845, z: 0.2678}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6658,6 +6673,12 @@ MonoBehaviour:
   card3: {fileID: 0}
   card4: {fileID: 0}
   card5: {fileID: 0}
+  card6: {fileID: 0}
+  card7: {fileID: 0}
+  card8: {fileID: 0}
+  card9: {fileID: 0}
+  card10: {fileID: 0}
+  card11: {fileID: 0}
   button1: {fileID: 0}
   button2: {fileID: 0}
   button3: {fileID: 0}
@@ -6665,6 +6686,10 @@ MonoBehaviour:
   button5: {fileID: 0}
   button6: {fileID: 0}
   button7: {fileID: 0}
+  button8: {fileID: 0}
+  button9: {fileID: 0}
+  button10: {fileID: 0}
+  button11: {fileID: 0}
   addbutton: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &1173008816
@@ -6810,7 +6835,7 @@ Transform:
   m_GameObject: {fileID: 1173441650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.38, y: -4.14, z: 4.436457}
+  m_LocalPosition: {x: 172.46, y: -4.14, z: 4.436457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7200,7 +7225,7 @@ Transform:
   m_GameObject: {fileID: 1345900116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 141.198, y: -5.43, z: 0}
+  m_LocalPosition: {x: -3.2, y: -5.6, z: 0}
   m_LocalScale: {x: 0.12432676, y: 0.107485674, z: 0.27388585}
   m_ConstrainProportionsScale: 0
   m_Children: []
