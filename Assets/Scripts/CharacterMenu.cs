@@ -26,6 +26,17 @@ public class CharacterMenu : MonoBehaviour
     public GameObject card9;
     public GameObject card10;
     public GameObject card11;
+    public GameObject card12;
+    public GameObject card13;
+    public GameObject card14;
+    public GameObject card15;
+    public GameObject card16;
+    public GameObject card17;
+    public GameObject card18;
+    public GameObject card19;
+    public GameObject card20;
+    public GameObject card21;
+    public GameObject card22;
 
 
     // ������� ������ �� ������
@@ -40,6 +51,17 @@ public class CharacterMenu : MonoBehaviour
     public Button button9;
     public Button button10;
     public Button button11;
+    public Button button12;
+    public Button button13;
+    public Button button14;
+    public Button button15;
+    public Button button16;
+    public Button button17;
+    public Button button18;
+    public Button button19;
+    public Button button20;
+    public Button button21;
+    public Button button22;
 
 
     public static int buttonpressed = 0;
@@ -102,6 +124,46 @@ public class CharacterMenu : MonoBehaviour
         if (card9saver.card9save == true && card9 != null)
         {
             card9.GetComponent<Image>().color = Color.white;
+        }
+        if (card10saver.card10save == true && card10 != null)
+        {
+            card10.GetComponent<Image>().color = Color.white;
+        }
+        if (card11saver.card11save == true && card11 != null)
+        {
+            card11.GetComponent<Image>().color = Color.white;
+        }
+        if (card12saver.card12save == true && card12 != null)
+        {
+            card12.GetComponent<Image>().color = Color.white;
+        }
+        if (card13saver.card13save == true && card13 != null)
+        {
+            card13.GetComponent<Image>().color = Color.white;
+        }
+        if (card14saver.card14save == true && card14 != null)
+        {
+            card14.GetComponent<Image>().color = Color.white;
+        }
+        if (card15saver.card15save == true && card15 != null)
+        {
+            card15.GetComponent<Image>().color = Color.white;
+        }
+        if (card16saver.card16save == true && card16 != null)
+        {
+            card16.GetComponent<Image>().color = Color.white;
+        }
+        if (card17saver.card17save == true && card17 != null)
+        {
+            card17.GetComponent<Image>().color = Color.white;
+        }
+        if (card18saver.card18save == true && card18 != null)
+        {
+            card18.GetComponent<Image>().color = Color.white;
+        }
+        if (card19saver.card19save == true && card19 != null)
+        {
+            card19.GetComponent<Image>().color = Color.white;
         }
 
 
@@ -189,11 +251,75 @@ public class CharacterMenu : MonoBehaviour
             text.text = "STRENGHT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
         }
 
-        else if (b == button10 && card9saver.card9save == true)
+
+        else if (b == button11 && card10saver.card10save == true)
         {
-            buttonpressed = 10;
+            buttonpressed = 11;
             addbutton.interactable = true;
-            text.text = "THE HERMIT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "WHEEL OF FORTUNE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button12 && card11saver.card11save == true)
+        {
+            buttonpressed = 12;
+            addbutton.interactable = true;
+            text.text = "JUSTICE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button13 && card12saver.card12save == true)
+        {
+            buttonpressed = 13;
+            addbutton.interactable = true;
+            text.text = "THE HANGED MAN" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button14 && card13saver.card13save == true)
+        {
+            buttonpressed = 14;
+            addbutton.interactable = true;
+            text.text = "DEATH" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button15 && card14saver.card14save == true)
+        {
+            buttonpressed = 15;
+            addbutton.interactable = true;
+            text.text = "TEMPERANCE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button16 && card15saver.card15save == true)
+        {
+            buttonpressed = 16;
+            addbutton.interactable = true;
+            text.text = "THE DEVIL" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button17 && card16saver.card16save == true)
+        {
+            buttonpressed = 17;
+            addbutton.interactable = true;
+            text.text = "THE TOWER" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button18 && card17saver.card17save == true)
+        {
+            buttonpressed = 18;
+            addbutton.interactable = true;
+            text.text = "THE STAR" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button19 && card18saver.card18save == true)
+        {
+            buttonpressed = 19;
+            addbutton.interactable = true;
+            text.text = "THE MOON" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button20 && card19saver.card19save == true)
+        {
+            buttonpressed = 20;
+            addbutton.interactable = true;
+            text.text = "THE SUN" + "\n" + "Card effect"; // ������ ����� �� ������� Text
         }
 
 

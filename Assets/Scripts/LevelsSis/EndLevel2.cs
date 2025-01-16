@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EndLevel : MonoBehaviour
+public class EndLevel2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public static bool end1=false;
+    public static bool end1 = false;
     public static bool end2 = false;
     public static bool end3 = false;
     public static bool end4 = false;
@@ -17,10 +16,10 @@ public class EndLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            end1 = true;
+            end3 = true;
             Destroy(gameObject);
             SceneManager.LoadScene("Levels");
         }
-        
+
     }
 }

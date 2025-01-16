@@ -494,6 +494,17 @@ MonoBehaviour:
   card9: {fileID: 718859820}
   card10: {fileID: 1906355552}
   card11: {fileID: 0}
+  card12: {fileID: 0}
+  card13: {fileID: 0}
+  card14: {fileID: 0}
+  card15: {fileID: 0}
+  card16: {fileID: 0}
+  card17: {fileID: 0}
+  card18: {fileID: 0}
+  card19: {fileID: 0}
+  card20: {fileID: 0}
+  card21: {fileID: 0}
+  card22: {fileID: 0}
   button1: {fileID: 1763690679}
   button2: {fileID: 1946776461}
   button3: {fileID: 390793333}
@@ -505,6 +516,17 @@ MonoBehaviour:
   button9: {fileID: 992164323}
   button10: {fileID: 419934881}
   button11: {fileID: 1519228080}
+  button12: {fileID: 0}
+  button13: {fileID: 0}
+  button14: {fileID: 0}
+  button15: {fileID: 0}
+  button16: {fileID: 0}
+  button17: {fileID: 0}
+  button18: {fileID: 0}
+  button19: {fileID: 0}
+  button20: {fileID: 0}
+  button21: {fileID: 0}
+  button22: {fileID: 0}
   addbutton: {fileID: 739933503}
   text: {fileID: 132615484}
 --- !u!114 &132615484
@@ -1467,8 +1489,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 284594113}
   m_HandleRect: {fileID: 284594112}
   m_Direction: 0
-  m_Value: -0.00000021263216
-  m_Size: 0.2413738
+  m_Value: -0.00000021263214
+  m_Size: 0.24137379
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3422,6 +3444,18 @@ MonoBehaviour:
   spr8: {fileID: 88676207, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
   spr9: {fileID: 1575031184, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
   spr10: {fileID: -497292407, guid: 92c474fc47f0e904dbb46aa67b7d55e6, type: 3}
+  spr11: {fileID: 0}
+  spr12: {fileID: 0}
+  spr13: {fileID: 0}
+  spr14: {fileID: 0}
+  spr15: {fileID: 0}
+  spr16: {fileID: 0}
+  spr17: {fileID: 0}
+  spr18: {fileID: 0}
+  spr19: {fileID: 0}
+  spr20: {fileID: 0}
+  spr21: {fileID: 0}
+  spr22: {fileID: 0}
   targetImage1: {fileID: 1436160331}
   targetImage2: {fileID: 1940280347}
   targetImage3: {fileID: 393193458}
@@ -5851,6 +5885,17 @@ MonoBehaviour:
   card9: {fileID: 0}
   card10: {fileID: 0}
   card11: {fileID: 0}
+  card12: {fileID: 0}
+  card13: {fileID: 0}
+  card14: {fileID: 0}
+  card15: {fileID: 0}
+  card16: {fileID: 0}
+  card17: {fileID: 0}
+  card18: {fileID: 0}
+  card19: {fileID: 0}
+  card20: {fileID: 0}
+  card21: {fileID: 0}
+  card22: {fileID: 0}
   button1: {fileID: 0}
   button2: {fileID: 0}
   button3: {fileID: 0}
@@ -5862,6 +5907,17 @@ MonoBehaviour:
   button9: {fileID: 0}
   button10: {fileID: 0}
   button11: {fileID: 0}
+  button12: {fileID: 0}
+  button13: {fileID: 0}
+  button14: {fileID: 0}
+  button15: {fileID: 0}
+  button16: {fileID: 0}
+  button17: {fileID: 0}
+  button18: {fileID: 0}
+  button19: {fileID: 0}
+  button20: {fileID: 0}
+  button21: {fileID: 0}
+  button22: {fileID: 0}
   addbutton: {fileID: 0}
   text: {fileID: 0}
 --- !u!95 &1173008816
@@ -5933,7 +5989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173441653}
   - component: {fileID: 1173441652}
-  - component: {fileID: 1173441651}
+  - component: {fileID: 1173441654}
   m_Layer: 0
   m_Name: end1
   m_TagString: Untagged
@@ -5941,18 +5997,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1173441651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173441650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72988c56c00f0b2478f1a36681dc64ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1173441652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6007,12 +6051,24 @@ Transform:
   m_GameObject: {fileID: 1173441650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.09, y: 5.7, z: 4.436457}
+  m_LocalPosition: {x: 60.4, y: 5.5, z: 4.436457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173441654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173441650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d49354f145303a4ebc27ac34a6ccf60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1176508259
 GameObject:
   m_ObjectHideFlags: 0

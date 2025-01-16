@@ -14,12 +14,6 @@ public class OpenLevel : MonoBehaviour
     public Button level4;
     public Button level5;
 
-    public Sprite levels1;
-    public Sprite levels2;
-    public Sprite levels3;
-    public Sprite levels4;
-    public Sprite levels5;
-
     public Sprite sprite;
 
     private void Start()
@@ -41,15 +35,15 @@ public class OpenLevel : MonoBehaviour
         {
             level2.interactable = true;
         }
-        else if (EndLevel.end2)
+        else if (EndLevel1.end2)
         {
             level3.interactable = true;
         }
-        else if (EndLevel.end3)
+        else if (EndLevel2.end3)
         {
             level4.interactable = true;
         }
-        else if (EndLevel.end4)
+        else if (EndLevel3.end4)
         {
             level5.interactable = true;
         }
