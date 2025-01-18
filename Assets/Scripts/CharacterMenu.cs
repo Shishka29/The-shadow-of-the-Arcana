@@ -251,6 +251,12 @@ public class CharacterMenu : MonoBehaviour
             text.text = "STRENGHT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
         }
 
+        else if (b == button10 && card9saver.card9save == true)
+        {
+            buttonpressed = 10;
+            addbutton.interactable = true;
+            text.text = "THE HERMIT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+        }
 
         else if (b == button11 && card10saver.card10save == true)
         {

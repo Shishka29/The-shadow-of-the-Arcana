@@ -1,18 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEditor.VersionControl.Asset;
+using System;
+
 
 
 public class Hero : Entity
 {
-    [SerializeField] private float speed = 3f;
+    public static float speed = 3f;
     [SerializeField] private int health;
-    [SerializeField] float JumpForce = 11f;
+    public static float JumpForce = 11f;
     private bool isGrounded = false;
     private int hp;
+
+
+    public static float critrate = 0f;
+    // Шанс уклонения в процентах
+    public static float chanceToDodge = 0.0f;
 
     [SerializeField] private Image[] hearts;
 
@@ -96,6 +100,8 @@ public class Hero : Entity
             death();
         }
 
+
+        
     }
 
     private void Attack()
@@ -179,8 +185,18 @@ public class Hero : Entity
 
     public override void GetDamage()
     {
-        hp -= 1;
-        Debug.Log(hp);
+        
+
+        System.Random random = new System.Random();
+
+        // Генерируем случайное число от 0 до 100
+        float randomNumber = random.Next(0, 100);
+        bool dodged = (randomNumber <= chanceToDodge);
+        if (!dodged) {
+            hp -= 1;
+            Debug.Log(hp);
+        }
+        
     }
 
     private void death()

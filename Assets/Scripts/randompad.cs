@@ -24,7 +24,7 @@ public class randompad : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + SpawnRate;
-            Randx = Random.Range(7.69f, 16.8f);
+            Randx = Random.Range(4.66f, 21f);
             WhereToSpawn=new Vector2(Randx,transform.position.y);
             Instantiate(obj,WhereToSpawn,Quaternion.identity);
         }

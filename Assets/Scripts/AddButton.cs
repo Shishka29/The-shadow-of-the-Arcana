@@ -71,6 +71,7 @@ public class AddButton : MonoBehaviour
         {
             if (CharacterMenu.buttonpressed==1 && zansprite1!=1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
+                Hero.speed += 1;
                 zansprite1 = 1;
                 targetImage1.sprite = spr1;
             }
@@ -86,16 +87,19 @@ public class AddButton : MonoBehaviour
             }
             else if(CharacterMenu.buttonpressed==4 && zansprite1 != 4 && zansprite2 != 4 && zansprite3 != 4 && zansprite4 != 4 && zansprite5 != 4)
             {
+                Hero.JumpForce += 1;
                 zansprite1 = 4;
                 targetImage1.sprite = spr4;
             }
             else if(CharacterMenu.buttonpressed==5 && zansprite1 != 5 && zansprite2 != 5 && zansprite3 != 5 && zansprite4 != 5 && zansprite5 != 5)
             {
+                Hero.chanceToDodge += 8;
                 zansprite1 = 5;
                 targetImage1.sprite = spr5;
             }
             else if (CharacterMenu.buttonpressed == 6 && zansprite1 != 6 && zansprite2 != 6 && zansprite3 != 6 && zansprite4 != 6 && zansprite5 != 6)
             {
+                Hero.speed += 2;
                 zansprite1 = 6;
                 targetImage1.sprite = spr6;
             }
@@ -106,6 +110,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 8 && zansprite1 != 8 && zansprite2 != 8 && zansprite3 != 8 && zansprite4 != 8 && zansprite5 != 8)
             {
+                Hero.speed += 3;
                 zansprite1 = 8;
                 targetImage1.sprite = spr8;
             }
@@ -116,6 +121,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 10 && zansprite1 != 10 && zansprite2 != 10 && zansprite3 != 10 && zansprite4 != 10 && zansprite5 != 10)
             {
+                Hero.JumpForce += 2;
                 zansprite1 = 10;
                 targetImage1.sprite = spr10;
             }
@@ -126,6 +132,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 12 && zansprite1 != 12 && zansprite2 != 12 && zansprite3 != 12 && zansprite4 != 12 && zansprite5 != 12)
             {
+                Hero.chanceToDodge += 12;
                 zansprite1 = 12;
                 targetImage1.sprite = spr12;
             }
@@ -141,11 +148,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 15 && zansprite1 != 15 && zansprite2 != 15 && zansprite3 != 15 && zansprite4 != 15 && zansprite5 != 15)
             {
+                Hero.JumpForce += 3;
                 zansprite1 = 15;
                 targetImage1.sprite = spr15;
             }
             else if (CharacterMenu.buttonpressed == 16 && zansprite1 != 16 && zansprite2 != 16 && zansprite3 != 16 && zansprite4 != 16 && zansprite5 != 16)
             {
+                Hero.chanceToDodge += 15;
                 zansprite1 = 16;
                 targetImage1.sprite = spr16;
             }
@@ -156,11 +165,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 18 && zansprite1 != 18 && zansprite2 != 18 && zansprite3 != 18 && zansprite4 != 18 && zansprite5 != 18)
             {
+                Hero.speed += 4;
                 zansprite1 = 18;
                 targetImage1.sprite = spr18;
             }
             else if (CharacterMenu.buttonpressed == 19 && zansprite1 != 19 && zansprite2 != 19 && zansprite3 != 19 && zansprite4 != 19 && zansprite5 != 19)
             {
+                Hero.chanceToDodge += 20;
                 zansprite1 = 19;
                 targetImage1.sprite = spr19;
             }
@@ -177,6 +188,7 @@ public class AddButton : MonoBehaviour
         {
             if (CharacterMenu.buttonpressed==1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
+                Hero.speed += 1;
                 zansprite2 = 1;
                 targetImage2.sprite = spr1;
             }
@@ -192,16 +204,19 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 4 && zansprite1 != 4 && zansprite2 != 4 && zansprite3 != 4 && zansprite4 != 4 && zansprite5 != 4)
             {
+                Hero.JumpForce += 1;
                 zansprite2 = 4;
                 targetImage2.sprite = spr4;
             }
             else if (CharacterMenu.buttonpressed==5 && zansprite1 != 5 && zansprite2 != 5 && zansprite3 != 5 && zansprite4 != 5 && zansprite5 != 5)
             {
+                Hero.chanceToDodge += 8;
                 zansprite2 = 5;
                 targetImage2.sprite = spr5;
             }
             else if (CharacterMenu.buttonpressed == 6 && zansprite1 != 6 && zansprite2 != 6 && zansprite3 != 6 && zansprite4 != 6 && zansprite5 != 6)
             {
+                Hero.speed += 2;
                 zansprite2 = 6;
                 targetImage2.sprite = spr6;
             }
@@ -212,6 +227,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 8 && zansprite1 != 8 && zansprite2 != 8 && zansprite3 != 8 && zansprite4 != 8 && zansprite5 != 8)
             {
+                Hero.speed += 3;
                 zansprite2 = 8;
                 targetImage2.sprite = spr8;
             }
@@ -222,6 +238,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 10 && zansprite1 != 10 && zansprite2 != 10 && zansprite3 != 10 && zansprite4 != 10 && zansprite5 != 10)
             {
+                Hero.JumpForce += 2;
                 zansprite2 = 10;
                 targetImage2.sprite = spr10;
             }
@@ -232,6 +249,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 12 && zansprite1 != 12 && zansprite2 != 12 && zansprite3 != 12 && zansprite4 != 12 && zansprite5 != 12)
             {
+                Hero.chanceToDodge += 12;
                 zansprite2 = 12;
                 targetImage2.sprite = spr12;
             }
@@ -247,11 +265,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 15 && zansprite1 != 15 && zansprite2 != 15 && zansprite3 != 15 && zansprite4 != 15 && zansprite5 != 15)
             {
+                Hero.JumpForce += 3;
                 zansprite2 = 15;
                 targetImage2.sprite = spr15;
             }
             else if (CharacterMenu.buttonpressed == 16 && zansprite1 != 16 && zansprite2 != 16 && zansprite3 != 16 && zansprite4 != 16 && zansprite5 != 16)
             {
+                Hero.chanceToDodge += 15;
                 zansprite2 = 16;
                 targetImage2.sprite = spr16;
             }
@@ -262,11 +282,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 18 && zansprite1 != 18 && zansprite2 != 18 && zansprite3 != 18 && zansprite4 != 18 && zansprite5 != 18)
             {
+                Hero.speed += 4;
                 zansprite2 = 18;
                 targetImage2.sprite = spr18;
             }
             else if (CharacterMenu.buttonpressed == 19 && zansprite1 != 19 && zansprite2 != 19 && zansprite3 != 19 && zansprite4 != 19 && zansprite5 != 19)
             {
+                Hero.chanceToDodge += 20;
                 zansprite2 = 19;
                 targetImage2.sprite = spr19;
             }
@@ -282,6 +304,7 @@ public class AddButton : MonoBehaviour
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
+                Hero.speed += 1;
                 zansprite3 = 1;
                 targetImage3.sprite = spr1;
             }
@@ -297,16 +320,19 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 4 && zansprite1 != 4 && zansprite2 != 4 && zansprite3 != 4 && zansprite4 != 4 && zansprite5 != 4)
             {
+                Hero.JumpForce += 1;
                 zansprite3 = 4;
                 targetImage3.sprite = spr4;
             }
             else if (CharacterMenu.buttonpressed == 5 && zansprite1 != 5 && zansprite2 != 5 && zansprite3 != 5 && zansprite4 != 5 && zansprite5 != 5)
             {
+                Hero.chanceToDodge += 8;
                 zansprite3 = 5;
                 targetImage3.sprite = spr5;
             }
             else if (CharacterMenu.buttonpressed == 6 && zansprite1 != 6 && zansprite2 != 6 && zansprite3 != 6 && zansprite4 != 6 && zansprite5 != 6)
             {
+                Hero.speed += 2;
                 zansprite3 = 6;
                 targetImage3.sprite = spr6;
             }
@@ -317,6 +343,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 8 && zansprite1 != 8 && zansprite2 != 8 && zansprite3 != 8 && zansprite4 != 8 && zansprite5 != 8)
             {
+                Hero.speed += 3;
                 zansprite3 = 8;
                 targetImage3.sprite = spr8;
             }
@@ -327,6 +354,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 10 && zansprite1 != 10 && zansprite2 != 10 && zansprite3 != 10 && zansprite4 != 10 && zansprite5 != 10)
             {
+                Hero.JumpForce += 2;
                 zansprite3 = 10;
                 targetImage3.sprite = spr10;
             }
@@ -337,6 +365,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 12 && zansprite1 != 12 && zansprite2 != 12 && zansprite3 != 12 && zansprite4 != 12 && zansprite5 != 12)
             {
+                Hero.chanceToDodge += 12;
                 zansprite3 = 12;
                 targetImage3.sprite = spr12;
             }
@@ -352,11 +381,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 15 && zansprite1 != 15 && zansprite2 != 15 && zansprite3 != 15 && zansprite4 != 15 && zansprite5 != 15)
             {
+                Hero.JumpForce += 3;
                 zansprite3 = 15;
                 targetImage3.sprite = spr15;
             }
             else if (CharacterMenu.buttonpressed == 16 && zansprite1 != 16 && zansprite2 != 16 && zansprite3 != 16 && zansprite4 != 16 && zansprite5 != 16)
             {
+                Hero.chanceToDodge += 15;
                 zansprite3 = 16;
                 targetImage3.sprite = spr16;
             }
@@ -367,11 +398,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 18 && zansprite1 != 18 && zansprite2 != 18 && zansprite3 != 18 && zansprite4 != 18 && zansprite5 != 18)
             {
+                Hero.speed += 4;
                 zansprite3 = 18;
                 targetImage3.sprite = spr18;
             }
             else if (CharacterMenu.buttonpressed == 19 && zansprite1 != 19 && zansprite2 != 19 && zansprite3 != 19 && zansprite4 != 19 && zansprite5 != 19)
             {
+                Hero.chanceToDodge += 20;
                 zansprite3 = 19;
                 targetImage3.sprite = spr19;
             }
@@ -387,6 +420,7 @@ public class AddButton : MonoBehaviour
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
+                Hero.speed += 1;
                 zansprite4 = 1;
                 targetImage4.sprite = spr1;
             }
@@ -402,16 +436,19 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 4 && zansprite1 != 4 && zansprite2 != 4 && zansprite3 != 4 && zansprite4 != 4 && zansprite5 != 4)
             {
+                Hero.JumpForce += 1;
                 zansprite4 = 4;
                 targetImage4.sprite = spr4;
             }
             else if (CharacterMenu.buttonpressed == 5 && zansprite1 != 5 && zansprite2 != 5 && zansprite3 != 5 && zansprite4 != 5 && zansprite5 != 5)
             {
+                Hero.chanceToDodge += 8;
                 zansprite4 = 5;
                 targetImage4.sprite = spr5;
             }
             else if (CharacterMenu.buttonpressed == 6 && zansprite1 != 6 && zansprite2 != 6 && zansprite3 != 6 && zansprite4 != 6 && zansprite5 != 6)
             {
+                Hero.speed += 2;
                 zansprite4 = 6;
                 targetImage4.sprite = spr6;
             }
@@ -422,6 +459,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 8 && zansprite1 != 8 && zansprite2 != 8 && zansprite3 != 8 && zansprite4 != 8 && zansprite5 != 8)
             {
+                Hero.speed += 3;
                 zansprite4 = 8;
                 targetImage4.sprite = spr8;
             }
@@ -432,6 +470,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 10 && zansprite1 != 10 && zansprite2 != 10 && zansprite3 != 10 && zansprite4 != 10 && zansprite5 != 10)
             {
+                Hero.JumpForce += 2;
                 zansprite4 = 10;
                 targetImage4.sprite = spr10;
             }
@@ -442,6 +481,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 12 && zansprite1 != 12 && zansprite2 != 12 && zansprite3 != 12 && zansprite4 != 12 && zansprite5 != 12)
             {
+                Hero.chanceToDodge += 12;
                 zansprite4 = 12;
                 targetImage4.sprite = spr12;
             }
@@ -457,11 +497,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 15 && zansprite1 != 15 && zansprite2 != 15 && zansprite3 != 15 && zansprite4 != 15 && zansprite5 != 15)
             {
+                Hero.JumpForce += 3;
                 zansprite4 = 15;
                 targetImage4.sprite = spr15;
             }
             else if (CharacterMenu.buttonpressed == 16 && zansprite1 != 16 && zansprite2 != 16 && zansprite3 != 16 && zansprite4 != 16 && zansprite5 != 16)
             {
+                Hero.chanceToDodge += 15;
                 zansprite4 = 16;
                 targetImage4.sprite = spr16;
             }
@@ -472,11 +514,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 18 && zansprite1 != 18 && zansprite2 != 18 && zansprite3 != 18 && zansprite4 != 18 && zansprite5 != 18)
             {
+                Hero.speed += 4;
                 zansprite4 = 18;
                 targetImage4.sprite = spr18;
             }
             else if (CharacterMenu.buttonpressed == 19 && zansprite1 != 19 && zansprite2 != 19 && zansprite3 != 19 && zansprite4 != 19 && zansprite5 != 19)
             {
+                Hero.chanceToDodge += 20;
                 zansprite4 = 19;
                 targetImage4.sprite = spr19;
             }
@@ -493,6 +537,7 @@ public class AddButton : MonoBehaviour
         {
             if (CharacterMenu.buttonpressed == 1 && zansprite1 != 1 && zansprite2 != 1 && zansprite3 != 1 && zansprite4 != 1 && zansprite5 != 1)
             {
+                Hero.speed += 1;
                 zansprite5 = 1;
                 targetImage5.sprite = spr1;
             }
@@ -508,16 +553,19 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 4 && zansprite1 != 4 && zansprite2 != 4 && zansprite3 != 4 && zansprite4 != 4 && zansprite5 != 4)
             {
+                Hero.JumpForce += 1;
                 zansprite5 = 4;
                 targetImage5.sprite = spr4;
             }
             else if (CharacterMenu.buttonpressed == 5 && zansprite1 != 5 && zansprite2 != 5 && zansprite3 != 5 && zansprite4 != 5 && zansprite5 != 5)
             {
+                Hero.chanceToDodge += 8;
                 zansprite5 = 5;
                 targetImage5.sprite = spr5;
             }
             else if (CharacterMenu.buttonpressed == 6 && zansprite1 != 6 && zansprite2 != 6 && zansprite3 != 6 && zansprite4 != 6 && zansprite5 != 6)
             {
+                Hero.speed += 2;
                 zansprite5 = 6;
                 targetImage5.sprite = spr6;
             }
@@ -528,6 +576,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 8 && zansprite1 != 8 && zansprite2 != 8 && zansprite3 != 8 && zansprite4 != 8 && zansprite5 != 8)
             {
+                Hero.speed += 3;
                 zansprite5 = 8;
                 targetImage5.sprite = spr8;
             }
@@ -538,6 +587,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 10 && zansprite1 != 10 && zansprite2 != 10 && zansprite3 != 10 && zansprite4 != 10 && zansprite5 != 10)
             {
+                Hero.JumpForce += 2;
                 zansprite5 = 10;
                 targetImage5.sprite = spr10;
             }
@@ -548,6 +598,7 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 12 && zansprite1 != 12 && zansprite2 != 12 && zansprite3 != 12 && zansprite4 != 12 && zansprite5 != 12)
             {
+                Hero.chanceToDodge += 12;
                 zansprite5 = 12;
                 targetImage5.sprite = spr12;
             }
@@ -563,11 +614,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 15 && zansprite1 != 15 && zansprite2 != 15 && zansprite3 != 15 && zansprite4 != 15 && zansprite5 != 15)
             {
+                Hero.JumpForce += 3;
                 zansprite5 = 15;
                 targetImage5.sprite = spr15;
             }
             else if (CharacterMenu.buttonpressed == 16 && zansprite1 != 16 && zansprite2 != 16 && zansprite3 != 16 && zansprite4 != 16 && zansprite5 != 16)
             {
+                Hero.chanceToDodge += 15;
                 zansprite5 = 16;
                 targetImage5.sprite = spr16;
             }
@@ -578,11 +631,13 @@ public class AddButton : MonoBehaviour
             }
             else if (CharacterMenu.buttonpressed == 18 && zansprite1 != 18 && zansprite2 != 18 && zansprite3 != 18 && zansprite4 != 18 && zansprite5 != 18)
             {
+                Hero.speed += 4;
                 zansprite5 = 18;
                 targetImage5.sprite = spr18;
             }
             else if (CharacterMenu.buttonpressed == 19 && zansprite1 != 19 && zansprite2 != 19 && zansprite3 != 19 && zansprite4 != 19 && zansprite5 != 19)
             {
+                Hero.chanceToDodge += 20;
                 zansprite5 = 19;
                 targetImage5.sprite = spr19;
             }
