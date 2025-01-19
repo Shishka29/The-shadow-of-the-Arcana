@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    protected int lives;
-    protected int power = 2;
+    public static int lives;
+    public static int power = 2;
     public virtual void GetDamage()
     {
         lives = lives - power;

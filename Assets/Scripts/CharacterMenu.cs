@@ -36,7 +36,6 @@ public class CharacterMenu : MonoBehaviour
     public GameObject card19;
     public GameObject card20;
     public GameObject card21;
-    public GameObject card22;
 
 
     // ������� ������ �� ������
@@ -165,6 +164,14 @@ public class CharacterMenu : MonoBehaviour
         {
             card19.GetComponent<Image>().color = Color.white;
         }
+        if (card20saver.card20save == true && card20 != null)
+        {
+            card20.GetComponent<Image>().color = Color.white;
+        }
+        if (card21saver.card21save == true && card21 != null)
+        {
+            card21.GetComponent<Image>().color = Color.white;
+        }
 
 
 
@@ -189,28 +196,28 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 1;
             addbutton.interactable = true;
-            text.text = "THE FOOL" + "\n" +"Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE FOOL" + "\n" +"+1 speed"; // ������ ����� �� ������� Text
         }
 
         else if (b == button2 && card1saver.card1save == true)
         {
             buttonpressed = 2;
             addbutton.interactable = true;
-            text.text = "THE MAGITIAN" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE MAGITIAN" + "\n" + "+2 strength"; // ������ ����� �� ������� Text
         }
 
         else if (b == button3 && card2saver.card2save == true)
         {
             buttonpressed = 3;
             addbutton.interactable = true;
-            text.text = "THE HIGH PRIESTESS" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE PRIESTESS" + "\n" + "+5 crit rate"; // ������ ����� �� ������� Text
         }
 
         else if (b == button4 && card3saver.card3save == true)
         {
             buttonpressed = 4;
             addbutton.interactable = true;
-            text.text = "THE EMPRESS" + "\n" + "Card effect"; ; // ������ ����� �� ������� Text
+            text.text = "THE EMPRESS" + "\n" + "+1 jump power"; ; // ������ ����� �� ������� Text
         }
 
 
@@ -218,7 +225,7 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 5;
             addbutton.interactable = true;
-            text.text = "THE EMPEROR" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE EMPEROR" + "\n" + "+8 dodge chance"; // ������ ����� �� ������� Text
         }
         
 
@@ -226,14 +233,14 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 6;
             addbutton.interactable = true;
-            text.text = "THE HEIROPHANT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE HEIROPHANT" + "\n" + "+2 speed"; // ������ ����� �� ������� Text
         }
 
         else if (b == button7 && card6saver.card6save == true)
         {
             buttonpressed = 7;
             addbutton.interactable = true;
-            text.text = "THE LOVERS" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE LOVERS" + "\n" + "-10 heal time"; // ������ ����� �� ������� Text
         }
 
 
@@ -241,93 +248,106 @@ public class CharacterMenu : MonoBehaviour
         {
             buttonpressed = 8;
             addbutton.interactable = true;
-            text.text = "THE CHARIOT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE CHARIOT" + "\n" + "+3 speed"; // ������ ����� �� ������� Text
         }
 
         else if (b == button9 && card8saver.card8save == true)
         {
             buttonpressed = 9;
             addbutton.interactable = true;
-            text.text = "STRENGHT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "STRENGHT" + "\n" + "+5 power"; // ������ ����� �� ������� Text
         }
 
         else if (b == button10 && card9saver.card9save == true)
         {
             buttonpressed = 10;
             addbutton.interactable = true;
-            text.text = "THE HERMIT" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE HERMIT" + "\n" + "+2 jump power"; // ������ ����� �� ������� Text
         }
 
         else if (b == button11 && card10saver.card10save == true)
         {
             buttonpressed = 11;
             addbutton.interactable = true;
-            text.text = "WHEEL OF FORTUNE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "WHEEL OF FORTUNE" + "\n" + "+10 crit rate"; // ������ ����� �� ������� Text
         }
 
         else if (b == button12 && card11saver.card11save == true)
         {
             buttonpressed = 12;
             addbutton.interactable = true;
-            text.text = "JUSTICE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "JUSTICE" + "\n" + "+10 dodge chance"; // ������ ����� �� ������� Text
         }
 
         else if (b == button13 && card12saver.card12save == true)
         {
             buttonpressed = 13;
             addbutton.interactable = true;
-            text.text = "THE HANGED MAN" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE HANGED" + "\n" + "-15 heal time"; // ������ ����� �� ������� Text
         }
 
         else if (b == button14 && card13saver.card13save == true)
         {
             buttonpressed = 14;
             addbutton.interactable = true;
-            text.text = "DEATH" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "DEATH" + "\n" + "+7 power"; // ������ ����� �� ������� Text
         }
 
         else if (b == button15 && card14saver.card14save == true)
         {
             buttonpressed = 15;
             addbutton.interactable = true;
-            text.text = "TEMPERANCE" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "TEMPERANCE" + "\n" + "+3 jump power"; // ������ ����� �� ������� Text
         }
 
         else if (b == button16 && card15saver.card15save == true)
         {
             buttonpressed = 16;
             addbutton.interactable = true;
-            text.text = "THE DEVIL" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE DEVIL" + "\n" + "+15 dodge chance"; // ������ ����� �� ������� Text
         }
 
         else if (b == button17 && card16saver.card16save == true)
         {
             buttonpressed = 17;
             addbutton.interactable = true;
-            text.text = "THE TOWER" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE TOWER" + "\n" + "+15 crit rate"; // ������ ����� �� ������� Text
         }
 
         else if (b == button18 && card17saver.card17save == true)
         {
             buttonpressed = 18;
             addbutton.interactable = true;
-            text.text = "THE STAR" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE STAR" + "\n" + "+4 speed"; // ������ ����� �� ������� Text
         }
 
         else if (b == button19 && card18saver.card18save == true)
         {
             buttonpressed = 19;
             addbutton.interactable = true;
-            text.text = "THE MOON" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE MOON" + "\n" + "+20 dodge chance"; // ������ ����� �� ������� Text
         }
 
         else if (b == button20 && card19saver.card19save == true)
         {
             buttonpressed = 20;
             addbutton.interactable = true;
-            text.text = "THE SUN" + "\n" + "Card effect"; // ������ ����� �� ������� Text
+            text.text = "THE SUN" + "\n" + "+10 power"; // ������ ����� �� ������� Text
         }
 
+        else if (b == button21 && card20saver.card20save == true)
+        {
+            buttonpressed = 21;
+            addbutton.interactable = true;
+            text.text = "JUDGEMENT" + "\n" + "+20 crit rate"; // ������ ����� �� ������� Text
+        }
+
+        else if (b == button22 && card21saver.card21save == true)
+        {
+            buttonpressed = 22;
+            addbutton.interactable = true;
+            text.text = "THE WORLD" + "\n" + "-20 heal time"; // ������ ����� �� ������� Text
+        }
 
         else
         {

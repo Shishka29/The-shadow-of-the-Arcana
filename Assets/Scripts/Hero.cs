@@ -2,6 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Threading;
+using UnityEngine.Rendering;
+
 
 
 
@@ -14,7 +17,7 @@ public class Hero : Entity
     private int hp;
 
 
-    public static float critrate = 0f;
+    public static float critrate = 99f;
     // Шанс уклонения в процентах
     public static float chanceToDodge = 0.0f;
 
@@ -36,10 +39,10 @@ public class Hero : Entity
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
-
+    DateTime lastHealTime = DateTime.Now;
     public static Hero Instance { get; set; }
 
-
+    public static int vost=60;
     private Canvas DeathMenu;
 
     private States State
@@ -69,6 +72,23 @@ public class Hero : Entity
 
     private void Update()
     {
+        Debug.Log(power);
+
+
+        if (hp < 5)
+        {
+            // Проверяем, прошло ли 15 секунд с момента последнего восстановления
+            if ((DateTime.Now - lastHealTime).TotalSeconds >= vost)
+            {
+                // Восстанавливаем HP
+                hp++;
+                lastHealTime = DateTime.Now;
+                hearts[hp-1].sprite = aliveHeart;
+                Debug.Log(hp);
+
+            }
+        }
+
         if (isGrounded && !isAttacking) State = States.idle;
         if (!isAttacking && Input.GetButton("Horizontal"))
             Run();
@@ -108,12 +128,26 @@ public class Hero : Entity
     {
         if (isGrounded && isRecharged)
         {
+            System.Random random = new System.Random();
+
+            // Генерируем случайное число от 0 до 100
+            float randomNumber0 = random.Next(0, 100);
+            bool dodged0 = (randomNumber0 <= critrate);
+            if (dodged0)
+            {
+                power*=2;
+                Debug.Log(1);
+            }
             State = States.attack;
             isAttacking = true;
             isRecharged = false;
 
             StartCoroutine(AttackAnimation());
             StartCoroutine(AttackCoolDown());
+            if (dodged0)
+            {
+                power /= 2;
+            }
         }
     }
 

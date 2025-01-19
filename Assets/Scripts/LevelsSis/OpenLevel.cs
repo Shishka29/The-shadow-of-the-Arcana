@@ -80,7 +80,7 @@ public class OpenLevel : MonoBehaviour
     public void open5()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("LastScene");
+        SceneManager.LoadScene("FinalScene");
     }
 
     public void back()

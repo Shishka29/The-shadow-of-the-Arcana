@@ -115,6 +115,53 @@ public class RemoveButton : MonoBehaviour
         {
             Hero.chanceToDodge -= 20;
         }
+        //восстановление
+        else if (a == 7)
+        {
+            Hero.vost +=10;
+        }
+        else if (a == 13)
+        {
+            Hero.vost += 15;
+        }
+        else if (a == 22)
+        {
+            Hero.vost += 20;
+        }
+        //крит шанс
+        else if (a == 3)
+        {
+            Hero.critrate-=5;
+        }
+        else if (a == 11)
+        {
+            Hero.critrate -= 10;
+        }
+        else if (a == 17)
+        {
+            Hero.critrate -= 15;
+        }
+        else if (a == 21)
+        {
+            Hero.critrate -= 20;
+        }
+        //сила атаки
+        else if (a == 2)
+        {
+            Hero.power -= 2;
+        }
+        else if (a == 9)
+        {
+            Hero.power -= 5;
+        }
+        else if (a == 14)
+        {
+            Hero.power -= 7;
+        }
+        else if (a == 20)
+        {
+            Hero.power -= 10;
+        }
     }
 
 
