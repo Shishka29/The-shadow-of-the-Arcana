@@ -35,15 +35,15 @@ public class OpenLevel : MonoBehaviour
         {
             level2.interactable = true;
         }
-        else if (EndLevel1.end2)
+        if (EndLevel1.end2)
         {
             level3.interactable = true;
         }
-        else if (EndLevel2.end3)
+        if (EndLevel2.end3)
         {
             level4.interactable = true;
         }
-        else if (EndLevel3.end4)
+        if (EndLevel3.end4)
         {
             level5.interactable = true;
         }
