@@ -15,11 +15,17 @@ public class EndLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        
         if (collision.CompareTag("Player"))
         {
+  
+
+            
             end1 = true;
             Destroy(gameObject);
             SceneManager.LoadScene("Levels");
+
         }
         
     }

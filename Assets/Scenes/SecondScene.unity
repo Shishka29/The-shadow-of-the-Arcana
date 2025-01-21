@@ -1805,6 +1805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: port2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 682334760845557302, guid: 030339c318cc4ec428cefeff20278bb9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -175897391, guid: 7bd8b575472bde3438b8e9187e1d726b, type: 3}
     - target: {fileID: 856644715522719326, guid: 030339c318cc4ec428cefeff20278bb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.7
@@ -1861,6 +1865,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7421690658651147417, guid: 030339c318cc4ec428cefeff20278bb9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -175897391, guid: 7bd8b575472bde3438b8e9187e1d726b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

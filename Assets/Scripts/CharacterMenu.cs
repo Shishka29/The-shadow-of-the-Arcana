@@ -72,6 +72,7 @@ public class CharacterMenu : MonoBehaviour
     public Text text; // ������ �� �����
 
     private Canvas Canvas;
+    
 
     private void Awake()
     {
