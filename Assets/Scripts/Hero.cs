@@ -187,12 +187,12 @@ public class Hero : Entity
     }
     private void Jump()
     {
-        if (jumpCount < maxJumpCount-1) // ������������ ���������� ������� �� maxJumpCount
+        if (jumpCount < maxJumpCount-1) 
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // ���������� ������������ �������� ����� �������
+            rb.velocity = new Vector2(rb.velocity.x, 0); 
             rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-            jumpCount++; // ����������� ������� �������
-            State = States.jump; // ������������� ��������� ������
+            jumpCount++; 
+            State = States.jump; 
         }
     }
 
@@ -203,10 +203,10 @@ public class Hero : Entity
 
         if (isGrounded)
         {
-            jumpCount = 0; // ���������� ������� ������� ��� �����������
-            if (!isAttacking) State = States.idle; // ������������� ��������� idle ��� �����������
+            jumpCount = 0; 
+            if (!isAttacking) State = States.idle; 
         }
-        else if (jumpCount >= 1) // ��������, ���� �������� � ������
+        else if (jumpCount >= 1) 
         {
             State = States.jump;
         }
