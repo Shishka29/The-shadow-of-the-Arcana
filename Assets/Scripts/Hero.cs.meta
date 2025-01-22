@@ -3,7 +3,10 @@ guid: 985dbbbdba651b242ba917f0ad337a4c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - aliveHeart: {fileID: 21300000, guid: 2ef3dafddaae31c419f312f8f9af8272, type: 3}
+  - deadHeart: {fileID: 21300000, guid: e5161650fd800594d8e843f04b0dd3ce, type: 3}
+  - attackPos: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

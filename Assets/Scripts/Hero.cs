@@ -97,14 +97,14 @@ public class Hero : Entity
         if (Input.GetButtonDown("Fire1"))
             Attack();
 
-        if (health > hp)
-        {
-            health = hp;
-        }
+        //if (health > hp)
+        //{
+        //    health = hp;
+        //}
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if (i < hp)
             {
                 hearts[i].sprite = aliveHeart;
             }
