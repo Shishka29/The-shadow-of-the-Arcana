@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharMenu : MonoBehaviour
+public class pausemen : MonoBehaviour
 {
-    public static bool objectLoaded = false;
+    public static bool objectLoaded1 = false;
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
 
         // Проверить, загружен ли объект в сцену
-        if (objectLoaded)
+        if (objectLoaded1)
         {
             // Уничтожить объект
             Destroy(gameObject);
@@ -19,8 +19,7 @@ public class CharMenu : MonoBehaviour
         else
         {
             // Установить флаг загрузки объекта в true
-            objectLoaded = true;
+            objectLoaded1 = true;
         }
     }
-
 }
