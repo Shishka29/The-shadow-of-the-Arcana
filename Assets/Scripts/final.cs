@@ -12,7 +12,7 @@ public class final : MonoBehaviour
     {
         
      
-        if (Boss.lives == 0 && asa==false)
+        if (Boss.lives <= 0 && asa==false)
         {
 
             // Создаем port
