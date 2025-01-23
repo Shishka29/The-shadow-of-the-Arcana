@@ -62,6 +62,11 @@ public class Boss : Entity
             //Debug.Log("Current Animation: attack");
             OnAttack();
         }
+        if(currentAnimationHash == Animator.StringToHash("skill_boss"))
+        {
+            //Debug.Log("Current Animation: skill");
+            OnAttack();
+        }
         if(currentAnimationHash == Animator.StringToHash("summon_boss"))
         {
             _isSpawning = true;
