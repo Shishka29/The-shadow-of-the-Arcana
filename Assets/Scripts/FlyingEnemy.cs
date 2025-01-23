@@ -25,4 +25,12 @@ public class FlyingEnemy : Entity
     {
         sprite.flipX = aiPath.desiredVelocity.x <= 0.01f;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject==Hero.Instance.gameObject)
+        {
+            Hero.Instance.GetDamage();
+        }
+    }
 }

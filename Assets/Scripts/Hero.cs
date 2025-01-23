@@ -72,7 +72,7 @@ public class Hero : Entity
 
     private void Update()
     {
-        Debug.Log(power);
+        //Debug.Log(power);
 
 
         if (hp < 5)
@@ -84,7 +84,7 @@ public class Hero : Entity
                 hp++;
                 lastHealTime = DateTime.Now;
                 hearts[hp-1].sprite = aliveHeart;
-                Debug.Log(hp);
+                //Debug.Log(hp);
 
             }
         }
@@ -136,7 +136,7 @@ public class Hero : Entity
             if (dodged0)
             {
                 power*=2;
-                Debug.Log(1);
+                //Debug.Log(1);
             }
             State = States.attack;
             isAttacking = true;
@@ -241,7 +241,7 @@ public class Hero : Entity
             if (DeathMenu.enabled == false)
             {
                 Time.timeScale = 0;
-                speed = 0;
+                //speed = 0;
                 DeathMenu.enabled=true;
             }
         }
