@@ -365,7 +365,7 @@ MonoBehaviour:
   timer: 0
   minTime: 0.5
   maxTime: 4
-  speed: 5
+  speed: 3
 --- !u!1101 &756828139257931213
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -656,4 +656,4 @@ MonoBehaviour:
   timer: 0
   minTime: 0.5
   maxTime: 4
-  speed: 5
+  speed: 3

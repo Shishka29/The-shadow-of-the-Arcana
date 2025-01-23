@@ -26,7 +26,7 @@ public class Boss : Entity
    
     private void Awake()
     {
-        lives = 10;
+        lives = 200;
     }
     void Start()
     {
@@ -44,7 +44,7 @@ public class Boss : Entity
     void Update()
     {
         Debug.Log(lives);
-        if (lives <= 5)
+        if (lives <= 100)
         {
             anim.SetTrigger("Stage2");
         }

@@ -14,7 +14,7 @@ public class Hero : Entity
     [SerializeField] private int health;
     public static float JumpForce = 11f;
     private bool isGrounded = false;
-    private int hp;
+    public static int hp;
 
 
     public static float critrate = 99f;
