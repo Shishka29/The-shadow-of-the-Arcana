@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Destr
   - Sound
+  - boss
+  - atp
   layers:
   - Default
   - TransparentFX
